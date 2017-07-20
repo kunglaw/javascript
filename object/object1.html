@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Membuat Object</title>
+<script>
+	// membuat object
+	// key => value
+	var programmer = {
+		
+		nama:"Aries Dimas Yudhistira", 
+		umur:26,
+		sifat:"Trolling",
+			
+		
+	};
+	
+	var designer = new Object();
+	designer.nama = "Muhammad Fadil Hakim";
+	designer.umur = 27;
+	designer.sifat = "Fun";
+</script>
+</head>
+
+<body>
+	<div>Programmer</div>
+	<div>Nama:<span id="nama"></span></div>
+    <div>Umur : <span id="umur"></span></div>
+    <div>Sifat : <span id="sifat"></span> </div>
+    <hr />
+    <div>Designer</div>
+    <div>Nama:<span id="nama1"></span></div>
+    <div>Umur : <span id="umur1"></span></div>
+    <div>Sifat : <span id="sifat1"></span> </div>
+    
+    <script>
+		
+		document.getElementById("nama").innerHTML = programmer.nama;
+		document.getElementById("umur").innerHTML = programmer.umur;
+		document.getElementById("sifat").innerHTML = programmer.sifat;
+		
+		document.getElementById("nama1").innerHTML = designer.nama; // designer["nama"];
+		document.getElementById("umur1").innerHTML = designer.umur; // designer["umur"];
+		document.getElementById("sifat1").innerHTML = designer.sifat;
+	
+	</script>
+</body>
+</html>

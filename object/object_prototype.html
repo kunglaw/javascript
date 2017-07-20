@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Object Prototype</title>
+<script>
+	
+	
+	function pemain_bola(nama,umur)
+	{
+		this.nama = nama;
+		this.umur = umur;
+		
+	}
+	
+	
+</script>
+</head>
+
+<body>
+	<div id="box"></div>
+    
+    <script>
+	
+		pemain_bola.prototype.negara = "Argentina";
+	
+		var pemain1 = new pemain_bola("Linonel Messi",34);
+		var pemain2 = new pemain_bola("Luis Suarez",30);
+		document.getElementById("box").innerHTML = pemain1.nama;
+		document.getElementById("box").innerHTML = pemain2.negara;
+	</script>
+</body>
+</html>

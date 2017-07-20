@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Object Method</title>
+<script>
+	// membuat object
+	// key => value
+	var programmer = {
+		
+		nama:"Aries Dimas Yudhistira", 
+		umur:28,
+		sifat:"Trolling",
+		getData:function(){
+			
+			var result;	
+			
+			result = "<div>Nama : "+this.nama+"</div><div>Umur : "+this.umur+"</div><div>Sifat : "+this.sifat+"</div>";
+			
+			return result;
+		},
+		setData:function(nama,umur,sifat)
+		{
+			this.nama = nama;
+			this.umur = umur;
+			this.sifat = sifat;
+			
+		}
+		
+	};
+	
+	var designer = new Object();
+	designer.nama = "Muhammad Fadil Hakim";
+	designer.umur = 27;
+	designer.sifat = "Fun";
+</script>
+</head>
+
+<body>
+	<div>Programmer</div>
+	<div id="result"> </div>
+    <hr />
+    <div>Designer</div>
+    <div>Nama:<span id="nama1"></span></div>
+    <div>Umur : <span id="umur1"></span></div>
+    <div>Sifat : <span id="sifat1"></span> </div>
+    
+    <script>
+		
+		programmer.setData("Muhammad Juldiansyah",28,"Sabar");
+		document.getElementById("result").innerHTML = programmer.getData();
+		
+		document.getElementById("nama1").innerHTML = designer.nama; // designer["nama"];
+		document.getElementById("umur1").innerHTML = designer.umur; // designer["umur"];
+		document.getElementById("sifat1").innerHTML = designer.sifat;
+	
+	</script>
+</body>
+</html>
