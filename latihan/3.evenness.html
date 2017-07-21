@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Evenness</title>
+<script>
+	
+	function evennness(number /*string*/)
+	{
+		var num_split = number.split(" ");
+		
+		var num_length = num_split.length;
+		
+		var odd1 = [];
+		var even1 = [];
+		var res_final;
+		
+		
+		
+		for(var i = 0; i <= num_length; i++ )
+		{
+		  if(!isNaN(num_split[i]))
+		  {
+			  // tentukan jenis angka 
+			  if(num_split[i] % 2 == 0) // even
+			  {
+				alert("even = " + num_split[i]);
+				//even1.push(num_split[i]);
+				even1[i] = num_split[i];  
+				alert("result even = "+even1);
+			  }
+			  else if(num_split[i]  % 2 == 1) // odd
+			  {
+				//odd1.push(num_split[i]);
+				odd1[i] = num_split[i];
+			  }			  
+		  }
+		}
+		
+		if(even1.length > odd1.length)
+		{
+			result = odd1;	
+		}
+		else
+		{
+			result = even1;	
+		}
+		
+		// return key nya ...
+		for(var j = 1; j <= result.length; j++)
+		{
+			if(result[j] !== "undefined")
+			{
+				res_final = j;
+			}
+		}
+		
+		return res_final;
+		
+	}
+
+</script>
+</head>
+
+<body>
+<div id="result"></div>
+<script>
+	
+	function echo(el,result)
+	{
+		return document.getElementById(el).innerHTML = result;	
+	}
+	var res = evennness("1 3 9 1 1 1 7 5 2 9 1");
+	echo("result",res);
+
+</script>
+</body>
+</html>
