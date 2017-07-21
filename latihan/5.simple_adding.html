@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+	function simple_adding(num)
+	{	
+		var res = 0;
+		var result = [];
+		
+		for(var j = 1; j <= num; j++)
+		{
+			result[j] = j; 	
+		}
+		
+		for(var i = num; i >= 1; i--)
+		{
+			if(res !== 0 )
+			{
+				res = res + (result[i]);
+			}
+			else
+			{
+				res = num;	
+			}
+		}
+		
+		return res;
+		
+	}
+	var f = simple_adding(5);
+	alert(f);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

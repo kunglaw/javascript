@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+	function first_factorial(num)
+	{
+		var res = [];
+		var result = 0;
+		
+		for(var j = 1; j <= num; j++)
+		{
+			res[j] = j; 	
+		}
+			
+		for(var i = num; i >= 1 ; i--)
+		{
+			
+			if(result !== 0)
+			{
+				result  = result * res[i];
+			}
+			else
+			{
+				result = res[i];	
+			}
+			
+		}
+		
+		return result;
+		
+	}
+	
+	
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
