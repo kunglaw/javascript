@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>String Method</title>
+<script>
+	
+	var str = "quick brown fox jump over a lazy dog";
+	var str2 = "you got some \"balls\" for doing that";
+	var str3 = "we are the guardian of peace.\n \"peace\" motherfucker ";
+	var str4 = "Hello ";
+	var str5 = "World";
+	
+	var panjang_string = str.length; // panjang dari string 
+	
+	var obj_str = new String("Dimas"); 
+	var obj_cons = obj_str.constructor;
+	
+	function echo(el,result)
+	{
+		return document.getElementById(el).innerHTML = result;	
+	}
+
+</script>
+</head>
+
+<body>
+	
+    <h2> String Method </h2>
+    <hr />
+    
+    <table border="1" style="border-collapse:collapse" cellpadding="10">
+    	<thead>
+        	<th> Method </th>
+            <th> Value </th>
+            <th> Result </th>
+            <th> Description </th>
+        </thead>
+        <tbody>
+        	<tr>
+                <td> length </td>
+                <td id="val1"> value </td>
+                <td id="result1"></td>
+                <td> Panjang dari string </td>
+            </tr>
+            <tr>
+                <td> object String </td>
+                <td id="val2"> value </td>
+                <td id="result2"></td>
+                <td> String Object </td>
+            </tr>
+            <tr>
+                <td> object Constractor </td>
+                <td id="val3"></td>
+                <td id="result3"></td>
+                <td> String Object Constructor </td>
+            </tr>
+            <tr>
+                <td> charAt(val) </td>
+                <td id="val4"></td>
+                <td id="result4"></td>
+                <td>Mengambil char dari sebuah string berdasarkan index dimulai dari 0. pada contoh val = 4 </td>
+            </tr>
+            <tr>
+                <td> charCodeAt(val) </td>
+                <td id="val5"></td>
+                <td id="result5"></td>
+                <td>Mengambil UNICODE char dari sebuah string berdasarkan index dimulai dari 0 </td>
+            </tr>
+            <tr>
+                <td> concat(val) </td>
+                <td id="val6"></td>
+                <td id="result6"></td>
+                <td>menggabungkan 2 string  </td>
+            </tr>
+            <tr>
+                <td> split(val) </td>
+                <td id="val7"></td>
+                <td id="result7"></td>
+                <td>Memisahkan string dengan acuan char tertentu. pada contoh val = " "  </td>
+            </tr>
+    	</tbody>
+    </table>
+    
+    <!-- <div id="result1"></div> -->
+    <div id="resultaa"></div>
+    <div id="resultab"></div>
+    <div id="resultac"></div>
+	<script>
+		// DOM harus dibawah element 
+		
+		echo("val1",str);
+		echo("val2",obj_str);
+		echo("val3",obj_cons);
+		echo("val4",str);
+		echo("val5",str);
+		echo("val6",str4+" & "+str5);
+		echo("val7",str);
+		
+		echo("result1",panjang_string);
+		echo("result2",obj_str.toSource()); // detail object
+		echo("result3",obj_cons);
+		echo("result4",str.charAt(4)); // mengambil character di index tertentu
+		echo("result5",str.charCodeAt(4)); // mengambil character di index tertentu
+		echo("result6",str4.concat(str5)); // menggabungkan 2 string
+		echo("result7",str.split(" ")); // menggabungkan 2 string
+		
+		echo("resultaa",str2); // 
+		echo("resultab",str3);
+		echo("resultac",str.split(" ")[0]); // str.split(" ")[0] mengambil value dari hasil split berdasarkan index nya 
+	</script>
+</body>
+</html>

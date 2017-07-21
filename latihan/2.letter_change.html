@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Letter Change</title>
+<script>
+	function echo(el,result)
+	{
+		return document.getElementById(el).innerHTML = result;	
+	}
+	function  LetterChanges(str)
+	{
+		  // code goes here  
+        var str = str.toLowerCase();
+		
+		var alphabet = "abcdefghijklmnopqrstuvwxyz";	
+		var split1 = alphabet.split("");
+		var len = alphabet.length;
+		var position = "";
+		
+		var split2 = str.split("");
+		var len2   = str.length;
+		var result = "";
+		var res2 = "";
+		
+		for(var i = 0;i<=len2-1;i++)
+		{
+			if(isNaN(split2[i]))
+			{ 
+			  // check position alphabet
+			  cia = alphabet.indexOf(split2[i]);
+		
+			  if(cia > -1)
+			  {
+			   position = cia + 1;
+			   // alert(position);
+			   res2 = split1[position];
+			   result = result.concat(res2);
+			  }
+			  else
+			  {
+				  result = result.concat(split2[i]);
+			  }
+			  
+			  
+			  
+			 
+			 
+			}
+			else 
+			{
+			  result = result.concat(split2[i]);		
+			}
+		}
+		
+		
+		return result;
+		
+	}
+
+</script>
+</head>
+
+<body>
+	<div id="result"></div>
+    <script>
+		
+		var res = LetterChanges("have fun!");
+		echo("result",res);
+	</script>
+</body>
+</html>
